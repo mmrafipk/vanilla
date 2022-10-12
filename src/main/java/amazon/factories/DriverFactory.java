@@ -6,6 +6,8 @@ import com.typesafe.config.Config;
 import amazon.config.EnvFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.extern.slf4j.Slf4j;
+
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -24,7 +26,7 @@ public class DriverFactory {
     }
 
     public static WebDriver getDriver() {
-        log.info("Getting driver for host: {}", HOST);
+       // log.info("Getting driver for host: {}", HOST);
         switch (HOST) {
             case LOCALHOST:
                 return getLocalWebDriver();
